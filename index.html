@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Fire Clash - Alamganj</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-red: #ff0000;
+            --accent-yellow: #ffcc00;
+            --whatsapp-green: #25d366;
+            --dark-bg: #050505;
+            --card-bg: #111111;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--dark-bg);
+            color: white;
+            font-family: 'Orbitron', sans-serif;
+            text-align: center;
+        }
+
+        /* Hero Header */
+        .hero {
+            padding: 60px 20px;
+            background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), 
+                        url('https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80');
+            background-size: cover;
+            border-bottom: 5px solid var(--primary-red);
+        }
+
+        h1 {
+            font-family: 'Bangers', cursive;
+            font-size: 4rem;
+            color: var(--primary-red);
+            margin: 0;
+            text-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
+            letter-spacing: 2px;
+        }
+
+        .event-details {
+            font-size: 1.2rem;
+            color: var(--accent-yellow);
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        /* Prize Pool Section */
+        .prize-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            padding: 30px 10px;
+            flex-wrap: wrap;
+        }
+
+        .prize-card {
+            background: var(--card-bg);
+            padding: 20px;
+            border: 1px solid #333;
+            border-radius: 12px;
+            width: 140px;
+            transition: 0.3s;
+        }
+
+        .prize-card h3 { font-size: 0.9rem; color: #888; margin: 0; }
+        .prize-card p { font-size: 1.5rem; color: var(--accent-yellow); margin: 5px 0; }
+
+        /* Registration Form */
+        .form-wrapper {
+            max-width: 480px;
+            margin: 0 auto 50px auto;
+            background: var(--card-bg);
+            padding: 35px;
+            border-radius: 20px;
+            border: 1px solid #222;
+            text-align: left;
+        }
+
+        .form-group { margin-bottom: 20px; }
+        label { display: block; margin-bottom: 8px; font-size: 0.8rem; color: #aaa; text-transform: uppercase; }
+        
+        input {
+            width: 100%;
+            padding: 14px;
+            background: #1a1a1a;
+            border: 1px solid #333;
+            color: white;
+            border-radius: 8px;
+            font-family: 'Orbitron', sans-serif;
+            box-sizing: border-box;
+        }
+
+        input:focus { border-color: var(--primary-red); outline: none; }
+
+        /* Payment Section */
+        .payment-box {
+            background: #000;
+            padding: 20px;
+            border-radius: 12px;
+            border: 2px dashed var(--primary-red);
+            text-align: center;
+            margin: 25px 0;
+        }
+
+        .qr-img {
+            width: 200px;
+            height: auto;
+            border: 4px solid white;
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+
+        /* Buttons */
+        .submit-btn {
+            width: 100%;
+            padding: 18px;
+            background: var(--primary-red);
+            border: none;
+            color: white;
+            font-weight: bold;
+            font-size: 1.1rem;
+            border-radius: 10px;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+            transition: 0.3s;
+        }
+
+        .whatsapp-btn {
+            width: 100%;
+            padding: 18px;
+            background: var(--whatsapp-green);
+            border: none;
+            color: white;
+            font-weight: bold;
+            font-size: 1.1rem;
+            border-radius: 10px;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: none; /* Hidden by default */
+            text-decoration: none;
+            text-align: center;
+            box-sizing: border-box;
+            box-shadow: 0 0 15px rgba(37, 211, 102, 0.3);
+        }
+
+        .submit-btn:hover { background: #d60000; }
+        .whatsapp-btn:hover { background: #1ebe57; transform: scale(1.02); }
+
+        .footer-note {
+            text-align: center;
+            font-size: 0.75rem;
+            color: #00ff00;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        footer { padding: 40px; color: #444; font-size: 0.8rem; border-top: 1px solid #111; }
+
+        @media (max-width: 500px) {
+            h1 { font-size: 2.8rem; }
+            .form-wrapper { margin: 15px; padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hero">
+        <h1>FREE FIRE CLASH</h1>
+        <p class="event-details">📍 ALAMGANJ | 📅 26/12/2025 | 🕒 05:00 PM</p>
+        <div style="margin-top: 15px;">
+            <span style="background: var(--primary-red); padding: 5px 15px; border-radius: 4px; font-weight: bold;">ENTRY FEE: ₹100</span>
+        </div>
+    </div>
+
+    <div class="prize-container">
+        <div class="prize-card"><h3>1st Prize</h3><p>₹100</p></div>
+        <div class="prize-card"><h3>2nd Prize</h3><p>₹50</p></div>
+        <div class="prize-card"><h3>3rd Prize</h3><p>₹10</p></div>
+    </div>
+
+    <div class="form-wrapper">
+        <h2 style="text-align: center; color: var(--primary-red); font-family: 'Bangers'; letter-spacing: 2px;">JOIN THE BATTLE</h2>
+        
+        <form id="registrationForm" action="https://formspree.io/f/mvzpnrlw" method="POST">
+            
+            <div class="form-group">
+                <label>Player Name (IGN)</label>
+                <input type="text" name="player_name" placeholder="E.g. KILLER_BOY" required>
+            </div>
+
+            <div class="form-group">
+                <label>Game UID</label>
+                <input type="text" name="player_uid" placeholder="E.g. 1029384756" required>
+            </div>
+
+            <div class="form-group">
+                <label>WhatsApp Number</label>
+                <input type="tel" name="whatsapp_no" placeholder="E.g. 9798642195" required>
+            </div>
+
+            <div class="payment-box">
+                <p style="color: var(--accent-yellow); font-weight: bold; margin: 0;">STEP 1: SCAN & PAY ₹100</p>
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=upi://pay?pa=mohitk43131@oksbi%26pn=Mohit%20Kumar%26am=100%26cu=INR" alt="Payment QR" class="qr-img">
+                <p style="font-size: 0.85rem; color: #fff;">UPI: mohitk43131@oksbi</p>
+            </div>
+
+            <button type="submit" id="submitBtn" class="submit-btn">1. Submit Details</button>
+
+            <a href="https://wa.me/919798642195?text=Hello%20Mohit,%20Tournament%20Registration%20Done.%20Yeh%20mera%20Payment%20Screenshot%20hai." 
+               id="whatsappBtn" 
+               class="whatsapp-btn">
+               2. Send Screenshot to WhatsApp
+            </a>
+            
+            <p class="footer-note" id="statusNote">⚠️ Fill the form and submit first!</p>
+        </form>
+    </div>
+
+    <footer>
+        &copy; 2025 Free Fire Clash - Managed by Mohit Kumar<br>
+        Organized in Alamganj | Contact: +91 9798642195
+    </footer>
+
+    <script>
+        const form = document.getElementById('registrationForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const waBtn = document.getElementById('whatsappBtn');
+        const statusNote = document.getElementById('statusNote');
+
+        form.addEventListener('submit', function(e) {
+            // Change button state to show loading
+            submitBtn.innerText = "SUBMITTING...";
+            submitBtn.style.background = "#444";
+            submitBtn.disabled = true;
+
+            // Wait 2 seconds before showing the WhatsApp button
+            setTimeout(function() {
+                // Hide submit button
+                submitBtn.style.display = 'none';
+                
+                // Show WhatsApp button
+                waBtn.style.display = 'block';
+                
+                // Update note
+                statusNote.innerHTML = "✅ Details Submitted! Now click above to send screenshot.";
+                statusNote.style.color = "#ffcc00";
+
+                // Optional: Automatically open WhatsApp after the delay
+                window.location.href = waBtn.href;
+            }, 2000);
+        });
+    </script>
+
+</body>
+</html>
