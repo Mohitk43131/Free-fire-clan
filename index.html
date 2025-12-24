@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Free Fire Clash - Alamganj</title>
+    <title>Free Fire Tournament - Alamganj</title>
     <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -34,7 +34,7 @@
 
         h1 {
             font-family: 'Bangers', cursive;
-            font-size: 4rem;
+            font-size: 3.5rem; /* Slightly reduced for longer text */
             color: var(--primary-red);
             margin: 0;
             text-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
@@ -42,7 +42,7 @@
         }
 
         .event-details {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             color: var(--accent-yellow);
             margin-top: 10px;
             font-weight: bold;
@@ -143,7 +143,7 @@
             cursor: pointer;
             text-transform: uppercase;
             letter-spacing: 1px;
-            display: none; /* Hidden by default */
+            display: none;
             text-decoration: none;
             text-align: center;
             box-sizing: border-box;
@@ -164,7 +164,7 @@
         footer { padding: 40px; color: #444; font-size: 0.8rem; border-top: 1px solid #111; }
 
         @media (max-width: 500px) {
-            h1 { font-size: 2.8rem; }
+            h1 { font-size: 2.4rem; }
             .form-wrapper { margin: 15px; padding: 20px; }
         }
     </style>
@@ -172,7 +172,7 @@
 <body>
 
     <div class="hero">
-        <h1>FREE FIRE CLASH</h1>
+        <h1>FREE FIRE TOURNAMENT</h1>
         <p class="event-details">📍 ALAMGANJ | 📅 26/12/2025 | 🕒 05:00 PM</p>
         <div style="margin-top: 15px;">
             <span style="background: var(--primary-red); padding: 5px 15px; border-radius: 4px; font-weight: bold;">ENTRY FEE: ₹100</span>
@@ -182,11 +182,11 @@
     <div class="prize-container">
         <div class="prize-card"><h3>1st Prize</h3><p>₹100</p></div>
         <div class="prize-card"><h3>2nd Prize</h3><p>₹50</p></div>
-        <div class="prize-card"><h3>3rd Prize</h3><p>₹10</p></div>
+        <div class="prize-card) "><h3>3rd Prize</h3><p>₹10</p></div>
     </div>
 
     <div class="form-wrapper">
-        <h2 style="text-align: center; color: var(--primary-red); font-family: 'Bangers'; letter-spacing: 2px;">JOIN THE BATTLE</h2>
+        <h2 style="text-align: center; color: var(--primary-red); font-family: 'Bangers'; letter-spacing: 2px;">JOIN THE TOURNAMENT</h2>
         
         <form id="registrationForm" action="https://formspree.io/f/mvzpnrlw" method="POST">
             
@@ -224,7 +224,7 @@
     </div>
 
     <footer>
-        &copy; 2025 Free Fire Clash - Managed by Mohit Kumar<br>
+        &copy; 2025 Free Fire Tournament - Managed by Mohit Kumar<br>
         Organized in Alamganj | Contact: +91 9798642195
     </footer>
 
@@ -235,24 +235,15 @@
         const statusNote = document.getElementById('statusNote');
 
         form.addEventListener('submit', function(e) {
-            // Change button state to show loading
             submitBtn.innerText = "SUBMITTING...";
             submitBtn.style.background = "#444";
             submitBtn.disabled = true;
 
-            // Wait 2 seconds before showing the WhatsApp button
             setTimeout(function() {
-                // Hide submit button
                 submitBtn.style.display = 'none';
-                
-                // Show WhatsApp button
                 waBtn.style.display = 'block';
-                
-                // Update note
                 statusNote.innerHTML = "✅ Details Submitted! Now click above to send screenshot.";
                 statusNote.style.color = "#ffcc00";
-
-                // Optional: Automatically open WhatsApp after the delay
                 window.location.href = waBtn.href;
             }, 2000);
         });
